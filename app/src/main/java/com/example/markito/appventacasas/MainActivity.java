@@ -15,6 +15,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btnAddCasa;
+    Button btnbtnListVecindario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         btnAddCasa = (Button)findViewById(R.id.btnAddCasa);
+        btnbtnListVecindario = (Button)findViewById(R.id.btnListVecindario);
 
         btnAddCasa.setOnClickListener(this);
+        btnbtnListVecindario.setOnClickListener(this);
 
     }
 
@@ -62,6 +65,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        if (v.getId() == R.id.btnAddCasa){
+            Intent intent = new Intent(MainActivity.this, AddCasa.class);
+            startActivity(intent);
+        }
+        else{
+            if (v.getId() == R.id.btnListVecindario){
+                Intent intent = new Intent(MainActivity.this, vecindarios.class);
+                startActivity(intent);
+            }
+        }
         Intent intent = new Intent(MainActivity.this, AddCasa.class);
         startActivity(intent);
     }
