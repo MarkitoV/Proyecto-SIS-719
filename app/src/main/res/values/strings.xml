@@ -2,5 +2,9 @@
     <string name="app_name">appVentaCasas</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_add_casa">Añadir Casa</string>
+
     <string name="title_activity_listarcasas">Listar Casas</string>
+
+    <string name="title_activity_add_vecindario">Añadir Vecindario</string>
+
 </resources>

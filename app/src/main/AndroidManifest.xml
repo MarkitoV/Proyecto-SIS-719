@@ -26,6 +26,10 @@
         <activity
             android:name=".listarcasas"
             android:label="@string/title_activity_listarcasas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddVecindario"
+            android:label="@string/title_activity_add_vecindario"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
