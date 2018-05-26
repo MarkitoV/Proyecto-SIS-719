@@ -14,7 +14,13 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+
     Button btnAddCasa;
+    Button btnVercasa;
+
+
+    Button btnAddVecindario;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +40,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnAddCasa = (Button)findViewById(R.id.btnAddCasa);
 
+        btnVercasa = (Button)findViewById(R.id.btnListarcasas);
+
         btnAddCasa.setOnClickListener(this);
+        btnVercasa.setOnClickListener(this);
+
+        btnAddVecindario = (Button)findViewById(R.id.btnAddVecindario);
+
+        btnAddCasa.setOnClickListener(this);
+        btnAddVecindario.setOnClickListener(this);
+
 
     }
 
@@ -62,7 +77,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(MainActivity.this, AddCasa.class);
-        startActivity(intent);
+
+        if (v.getId() == R.id.btnAddCasa) {
+            Intent intent = new Intent(MainActivity.this, AddCasa.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.btnListarcasas) {
+            Intent intent = new Intent(MainActivity.this, listarcasas.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.btnAddVecindario) {
+            Intent intent = new Intent(MainActivity.this, AddVecindario.class);
+            startActivity(intent);
+        }
     }
 }
+
